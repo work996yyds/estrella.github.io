@@ -1,0 +1,96 @@
+/* 基础重置和样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px; /* 为固定页脚留出空间 */
+}
+
+/* 页眉样式 */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 导航栏样式 */
+nav {
+    background-color: #cccccc;
+    padding: 4px;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* 主内容区样式 */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    main {
+        padding: 15px;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    nav, footer {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    
+    main {
+        padding: 0;
+    }
+}
